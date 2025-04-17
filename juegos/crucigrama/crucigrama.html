@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/articulos.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <title>crucigrama</title>
+    <style>
+        #volume-slider-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Asegura que el slider esté por encima del canvas */
+}
+
+#volume-slider {
+    width: 100px; /* Ancho del slider */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el slider */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="nav">
+            <script>
+                inicio = '../../index.html';
+                img = '../../img/perfil.png';
+            </script>
+        </nav>
+
+      
+        <main class="content" >
+          <header id="header"></header>
+        
+          <div id="crucigrama" style="display: flex; margin: 20px auto; justify-content: center; width: 100%; height: 70vh;">
+            <script src="crucigrama.js"></script>
+          </div>
+        </main>
+    </div>
+
+   
+  
+    <script src="../../js/nav.js"></script>
+    <script src="../../js/juegos.js"></script>
+   
+</body>
+</html>

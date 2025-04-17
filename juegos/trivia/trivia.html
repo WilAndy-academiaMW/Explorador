@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/articulos.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <title>crucigrama</title>
+    <style>
+        /* Estilos generales (PC) */
+        .sidebar, 
+        .content, 
+        #header {
+            display: block; /* Mostrar todo en PC */
+        }
+    
+        /* Ocultar todo excepto el juego en móviles */
+        @media only screen and (max-width: 768px) {
+            .sidebar, 
+            #header, 
+            .content > *:not(#trivia) {
+                display: none !important; /* Oculta sidebar, header y otros elementos */
+            }
+    
+            /* Forzar el contenedor del juego a pantalla completa */
+            #trivia {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                z-index: 9999 !important;
+            }
+    
+            /* Eliminar scroll y márgenes del body */
+            body, html {
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+    
+        /* Ajustes del slider de volumen (opcional) */
+        #volume-slider-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        #volume-slider {
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="nav">
+            <script>
+                inicio = '../../index.html';
+                img = '../../img/perfil.png';
+            </script>
+        </nav>
+
+      
+        <main class="content" >
+          <header id="header"></header>
+        
+          <div id="trivia" style="display: flex; margin: 0 auto; justify-content: center; width: 70%; height: 80vh; ">
+            <script src="trivia.js"></script>
+            <script src="game.js"></script>
+          </div>
+        </main>
+    </div>
+
+   
+  
+    <script src="../../articulos/navegacion.js"></script>
+    <script src="../../js/menu.js"></script>
+
+   
+</body>
+</html>

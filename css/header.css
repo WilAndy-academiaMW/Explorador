@@ -1,0 +1,91 @@
+
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor principal del slider */
+    .slider {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom:100px;
+    }
+
+    /* Contenedor de las imágenes */
+    .slider-images {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Estilo de las imágenes */
+    .slider-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: translateX(100%); /* Inicia fuera de la pantalla hacia la derecha */
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transición suave */
+    }
+
+    /* Imagen activa */
+    .slider-images img.active {
+      opacity: 1;
+      transform: translateX(0); /* Mueve la imagen hacia el centro */
+    }
+
+    /* Caja de contenido (título, subtítulo y botón) */
+    .content-box {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 300px;
+      opacity: 0;
+      transform: translateY(-20px); /* Inicia un poco hacia arriba */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave */
+    }
+
+    /* Caja de contenido activa */
+    .content-box.active {
+      opacity: 1;
+      transform: translateY(0); /* Mueve la caja hacia abajo */
+    }
+
+    /* Estilo del título */
+    .content-box h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    /* Estilo del subtítulo */
+    .content-box p {
+      margin: 0 0 15px;
+      font-size: 16px;
+    }
+
+    /* Estilo del botón */
+    .content-box a {
+      display: inline-block;
+      background: #ff5722;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease-in-out;
+    }
+
+    /* Hover del botón */
+    .content-box a:hover {
+      background: #e64a19;
+    }
