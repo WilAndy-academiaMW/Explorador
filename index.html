@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El explorador de la historia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/perfil.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/header.css">
+
+    <style>
+      /* CSS */
+      .ad-container {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0,0,0,0.3);
+          z-index: 1000;
+          text-align: center;
+      }
+      
+      .ad-content {
+          position: relative;
+      }
+      
+      .close-ad {
+          position: absolute;
+          right: 10px;
+          top: 5px;
+          cursor: pointer;
+          font-size: 24px;
+      }
+      
+      #countdown {
+          font-size: 24px;
+          color: #2c3e50;
+          margin: 10px 0;
+      }
+      
+      .ad-space {
+          margin: 15px 0;
+          min-height: 250px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      
+      #downloadBtn {
+          background: #27ae60;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+      #downloadBtn:disabled {
+          background: #95a5a6;
+          cursor: not-allowed;
+      }
+      </style>
+    
+  </head>
+</head>
+<body>
+  
+    <div class="container" >
+        <nav class="sidebar" id="nav">
+          <script>
+            inicio='index.html'
+            img='../img/perfil.png';
+          </script>
+        </nav>
+    
+      <main class="content"> 
+        <header id="header"></header>
+        <div id="carrusel"></div> 
+        <section id="home">
+        </section>
+        <section id="home2" >
+         
+        </section>
+      </main> 
+    
+        </div>
+  
+  
+  
+  
+    
+    <script src="js/nav.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/home.js"> </script>
+    <script src="js/juegos.js"> </script>
+ 
+  
+</body>
+</html>
